@@ -4,7 +4,7 @@ import itertools
 import networkx as nx
 
 # ====== B1: Đọc dữ liệu courses.json ======
-with open("courses.json", "r", encoding="utf-8") as f:
+with open("courses_all.json", "r", encoding="utf-8") as f:
     courses = json.load(f)
 
 # ====== B2: Tổng hợp instructors và gán ID ======
