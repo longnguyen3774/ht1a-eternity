@@ -9,16 +9,16 @@ with open("courses_all.json", "r", encoding="utf-8") as f:
 
 # ====== B2: Tổng hợp instructors và gán ID ======
 all_instructors = sorted({inst for c in courses for inst in c["instructors"]})
-instructor2id = {name: idx for idx, name in enumerate(all_instructors)}
+instructor2id = {username: idx for idx, username in enumerate(all_instructors)}
 
 # Lưu instructors.json
-instructors_data = [{"id": idx, "name": name} for name, idx in instructor2id.items()]
+instructors_data = [{"id": idx, "username": username} for username, idx in instructor2id.items()]
 with open("instructors.json", "w", encoding="utf-8") as f:
     json.dump(instructors_data, f, ensure_ascii=False, indent=2)
 
 # ====== B3: Thay thế instructors trong courses.json bằng ID ======
 for c in courses:
-    c["instructors"] = [instructor2id[name] for name in c["instructors"]]
+    c["instructors"] = [instructor2id[username] for username in c["instructors"]]
 
 with open("courses_with_ids.json", "w", encoding="utf-8") as f:
     json.dump(courses, f, ensure_ascii=False, indent=2)

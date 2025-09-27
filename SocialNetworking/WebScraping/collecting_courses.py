@@ -12,9 +12,9 @@ links = df_links["url"].tolist()
 
 courses = []
 chunk_size = 200  # mỗi 200 khóa học thì lưu lại
-chunk_index = 24  # đánh số file
+chunk_index = 29  # đánh số file
 
-for idx, url in enumerate(links[4600:], start=1):
+for idx, url in enumerate(links[5600:], start=1):
     print(f"[{idx}] Đang xử lý: {url}")
     try:
         response = requests.get(url, timeout=10)
@@ -46,13 +46,28 @@ for idx, url in enumerate(links[4600:], start=1):
         else:
             what_you_learn = ""
 
+        # Lấy danh sách skills
+        skills = ""
+        about_div = soup.find("div", id="about")
+        if about_div:
+            mid_div = about_div.find("div", recursive=False)  # div trung gian
+            if mid_div:
+                inner_divs = mid_div.find_all("div", recursive=False)
+                if len(inner_divs) >= 2:
+                    target_div = inner_divs[-2]  # div con index -2
+                    ul_tag = target_div.find("ul")
+                    if ul_tag:
+                        skills_list = [li.get_text(strip=True) for li in ul_tag.find_all("li")]
+                        skills = ", ".join(skills_list)
+
         # Lưu thông tin khóa học
         courses.append({
             "url": url,
             "name": course_name,
-            "content": course_content,
             "what_you_learn": what_you_learn,
-            "instructors": instructors_list
+            "skills": skills,
+            "instructors": instructors_list,
+            "content": course_content,
         })
 
     except Exception as e:
