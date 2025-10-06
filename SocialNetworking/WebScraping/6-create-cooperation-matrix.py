@@ -3,7 +3,7 @@ import pandas as pd
 import itertools
 import networkx as nx
 
-# ====== B1: Đọc dữ liệu courses.json ======
+# ====== B1: Đọc dữ liệu courses_all.json ======
 with open("courses_all.json", "r", encoding="utf-8") as f:
     courses = json.load(f)
 
@@ -23,16 +23,38 @@ for c in courses:
 with open("courses_with_ids.json", "w", encoding="utf-8") as f:
     json.dump(courses, f, ensure_ascii=False, indent=2)
 
-# ====== B4: Xây dựng ma trận hợp tác ======
+# ====== B4: Đọc dữ liệu giảng viên (có thông tin tổ chức) ======
+with open("instructors_all.json", "r", encoding="utf-8") as f:
+    instructors_full = json.load(f)
+
+# Tạo mapping id → danh sách tổ chức
+id2orgs = {
+    instructor["id"]: instructor.get("organizations", [])
+    for instructor in instructors_full
+    if "id" in instructor
+}
+
+# ====== B5: Xây dựng ma trận hợp tác ======
 n = len(all_instructors)
 matrix = [[0]*n for _ in range(n)]
 
+# --- (1) Cộng điểm nếu cùng dạy khóa học ---
 for c in courses:
     ids = c["instructors"]
     for i, j in itertools.combinations(ids, 2):
         matrix[i][j] += 1
-        matrix[j][i] += 1  # vì đồ thị vô hướng
+        matrix[j][i] += 1
 
-# Lưu ma trận ra CSV
+# --- (2) Cộng điểm nếu cùng tổ chức ---
+for i, j in itertools.combinations(range(n), 2):
+    orgs_i = set(id2orgs.get(i, []))
+    orgs_j = set(id2orgs.get(j, []))
+    if orgs_i and orgs_j and orgs_i.intersection(orgs_j):
+        matrix[i][j] += 1
+        matrix[j][i] += 1
+
+# ====== B6: Lưu ma trận ra CSV ======
 df_matrix = pd.DataFrame(matrix, index=range(n), columns=range(n))
 df_matrix.to_csv("cooperation_matrix.csv", encoding="utf-8-sig")
+
+print("✅ Đã tạo file cooperation_matrix.csv kết hợp cả khóa học và tổ chức.")
