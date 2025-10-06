@@ -83,7 +83,7 @@ try:
                 print(f"⏹ Hết trang trong category {category}.")
                 break
 
-        file_name = f"{category}_courses.csv"
+        file_name = f"categories/{category}_courses.csv"
         with open(file_name, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             for link in sorted(all_hrefs):
@@ -95,12 +95,3 @@ try:
 
 finally:
     driver.quit()
-
-# --- Lưu ra CSV ---
-# with open("course_links.csv", "w", newline="", encoding="utf-8") as f:
-#     writer = csv.writer(f)
-#     writer.writerow(["course_link"])
-#     for link in sorted(all_hrefs):
-#         writer.writerow([link])
-#
-# print(f"\n🎉 Hoàn thành! Đã lưu {len(all_hrefs)} link khóa học vào file course_links.csv")

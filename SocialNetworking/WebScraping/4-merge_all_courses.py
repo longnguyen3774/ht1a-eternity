@@ -1,10 +1,14 @@
 import glob
 import json
+import re
 
 all_courses = []
 
 # Tìm tất cả file courses_*.json
-files = sorted(glob.glob("courses/courses_*.json"))
+files = glob.glob("courses/courses_*.json")
+
+# Sắp xếp theo số trong tên file
+files.sort(key=lambda x: int(re.search(r'courses_(\d+)\.json', x).group(1)))
 
 print(f"📂 Tìm thấy {len(files)} file:", files)
 

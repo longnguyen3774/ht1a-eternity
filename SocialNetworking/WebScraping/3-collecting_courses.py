@@ -12,9 +12,9 @@ links = df_links["url"].tolist()
 
 courses = []
 chunk_size = 200  # mỗi 200 khóa học thì lưu lại
-chunk_index = 29  # đánh số file
+chunk_index = 1  # đánh số file
 
-for idx, url in enumerate(links[5600:], start=1):
+for idx, url in enumerate(links, start=1):
     print(f"[{idx}] Đang xử lý: {url}")
     try:
         response = requests.get(url, timeout=10)
@@ -46,8 +46,9 @@ for idx, url in enumerate(links[5600:], start=1):
         else:
             what_you_learn = ""
 
-        # Lấy danh sách skills
+        # Lấy danh sách skills và language
         skills = ""
+        language = ""
         about_div = soup.find("div", id="about")
         if about_div:
             mid_div = about_div.find("div", recursive=False)  # div trung gian
@@ -60,12 +61,19 @@ for idx, url in enumerate(links[5600:], start=1):
                         skills_list = [li.get_text(strip=True) for li in ul_tag.find_all("li")]
                         skills = ", ".join(skills_list)
 
+                    last_div = inner_divs[-1]
+                    span_tag = last_div.find("span") if last_div else None
+
+                    if span_tag and "Taught in" in span_tag.text:
+                        language = span_tag.text.replace("Taught in", "").strip()
+
         # Lưu thông tin khóa học
         courses.append({
             "url": url,
             "name": course_name,
             "what_you_learn": what_you_learn,
             "skills": skills,
+            "language": language,
             "instructors": instructors_list,
             "content": course_content,
         })
@@ -76,7 +84,7 @@ for idx, url in enumerate(links[5600:], start=1):
 
     # ======= Checkpoint mỗi 200 khóa học =======
     if idx % chunk_size == 0:
-        filename = f"courses_{chunk_index}.json"
+        filename = f"courses/courses_{chunk_index}.json"
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(courses, f, ensure_ascii=False, indent=2)
         print(f"💾 Đã lưu {len(courses)} khóa học vào {filename}")
@@ -85,7 +93,7 @@ for idx, url in enumerate(links[5600:], start=1):
 
 # ======= Lưu phần còn lại chưa đủ 200 =======
 if courses:
-    filename = f"courses_{chunk_index}.json"
+    filename = f"courses/courses_{chunk_index}.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(courses, f, ensure_ascii=False, indent=2)
     print(f"💾 Đã lưu {len(courses)} khóa học vào {filename}")

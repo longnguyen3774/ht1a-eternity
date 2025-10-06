@@ -2,7 +2,7 @@ import glob
 import csv
 
 # B1: Tìm tất cả file CSV theo pattern *_courses.csv
-csv_files = glob.glob("*_courses.csv")
+csv_files = glob.glob("categories/*_courses.csv")
 
 all_links = set()
 
