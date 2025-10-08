@@ -76,4 +76,4 @@ for ins in instructors:
 with open("instructors_all.json", "w", encoding="utf-8") as f:
     json.dump(instructors, f, ensure_ascii=False, indent=2)
 
-print("✅ Hoàn tất cập nhật instructors.json")
+print("✅ Hoàn tất cập nhật instructors_all.json")
