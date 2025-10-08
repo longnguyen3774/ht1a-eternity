@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4ec864e-96b2-4047-932e-3e8bb27dff11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/SocialNetworking.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SocialNetworking.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SocialNetworking-WebScraping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-collect_course_links.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-merge_all_categories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3-collect_courses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-merge_all_courses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-extract_list_of_instructors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6-collect_instructors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-create-cooperation-matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/arts-and-humanities_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/business_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/computer-science_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/data-science_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/health_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/information-technology_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/language-learning_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/math-and-logic_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/personal-development_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/physical-science-and-engineering_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/social-sciences_courses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cooperation_matrix.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_links.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_27.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_29.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_30.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_33.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/courses_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses_all.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses_with_ids.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/instructors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/instructors_all.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;longnguyen3774&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/longnguyen3774/ht1a-eternity&quot;,
+    &quot;accountId&quot;: &quot;c9213c81-28c8-4e54-8400-15f79c47cd54&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="32om4FHnLmyf5sOkAdgS8nNk0vE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.co_instructors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collecting_course_intructors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collecting_course_links.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collecting_courses.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collecting_instructors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.handle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.merge.executor&quot;: &quot;Run&quot;,
+    &quot;Python.merge_all_courses.executor&quot;: &quot;Run&quot;,
+    &quot;Python.uco.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;P:/ht1a-eternity/SocialNetworking/WebScraping&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4ec864e-96b2-4047-932e-3e8bb27dff11" name="Changes" comment="" />
+      <created>1758095105650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758095105650</updated>
+    </task>
+    <servers />
+  </component>
+</project>
