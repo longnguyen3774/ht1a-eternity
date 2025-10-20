@@ -55,7 +55,7 @@ for idx, url in enumerate(links, start=1):
             if mid_div:
                 inner_divs = mid_div.find_all("div", recursive=False)
                 if len(inner_divs) >= 2:
-                    target_div = inner_divs[-2]  # div con index -2
+                    target_div = inner_divs[-2]
                     ul_tag = target_div.find("ul")
                     if ul_tag:
                         skills_list = [li.get_text(strip=True) for li in ul_tag.find_all("li")]
